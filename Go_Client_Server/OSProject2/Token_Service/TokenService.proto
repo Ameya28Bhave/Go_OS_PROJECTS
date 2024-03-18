@@ -1,0 +1,44 @@
+syntax = "proto3";
+option go_package = "./github.com/Token_Service";
+// Define the message format for a token.
+message Token {
+  string id = 1;
+  string name = 2;
+  uint64 low = 3;
+  uint64 mid = 4;
+  uint64 high = 5;
+}
+
+// Define the gRPC service for tokens.
+service TokenService {
+  // Create a new token.
+  rpc CreateToken (Token) returns (CreateTokenResponse) {}
+
+  // Drop an existing token.
+  rpc DropToken (Token) returns (DropTokenResponse) {}
+
+  // Write data to a token.
+  rpc WriteToken (Token) returns (WriteTokenResponse) {}
+
+  // Read data from a token.
+  rpc ReadToken (Token) returns (ReadTokenResponse) {}
+}
+
+// Define the response messages for each gRPC method.
+message CreateTokenResponse {
+  string cr_message = 1;
+}
+
+message DropTokenResponse {
+  string dr_message = 1;
+}
+
+message WriteTokenResponse {
+  string wr_message = 1;
+}
+
+message ReadTokenResponse {
+  string rd_message = 1;
+}
+
+//protoc --go_out=. --go-grpc_out=. --plugin=/Users/ameya/go/bin/protoc-gen-go ./TokenService.proto  

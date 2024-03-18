@@ -1,0 +1,32 @@
+syntax = "proto3";
+package token;
+
+option go_package = "./";
+
+message TokenRequest{
+    string id = 1;
+    string name = 2;
+    message Domain{
+        uint64 low  = 1;
+        uint64 mid  = 2;
+        uint64 high = 3;
+    }
+    message State {
+        uint64 partialval = 1;
+        uint64 finalval = 2;
+    } 
+    Domain domain = 3;
+    State token_state = 4;
+}
+
+message TokenResponse{
+    string body = 1;
+}
+service TokenService{
+    rpc Create(TokenRequest) returns (TokenResponse){}
+    rpc Drop(TokenRequest) returns (TokenResponse){}
+    rpc Write(TokenRequest) returns (TokenResponse){}
+    rpc Read(TokenRequest) returns (TokenResponse){}
+}
+
+//protoc --go_out=. --go-grpc_out=. --plugin=/Users/ameya/go/bin/protoc-gen-go ./TokenService.proto 

@@ -1,0 +1,7 @@
+Execution steps
+1. Firstly download the package that conatins the .pb.go and _rpc.pb.go files created from your .proto file.
+Execute this using the commmand :go get github.com/AmeyaBhave28UMBC/grpc-go/Token_Service . 
+Check whether this package dependency is created in your go.mod file where your will have the package containing the Client and Server
+2. Execute the :go run ./Server/tokenserver.go -port 50051 
+3. Once your server is running then you can execute your clients using the commands 
+  :go run ./Client/tokenclient.go -create -id 1234 -host localhost -port 50051

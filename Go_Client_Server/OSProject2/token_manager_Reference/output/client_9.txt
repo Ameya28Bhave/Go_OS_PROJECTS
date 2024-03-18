@@ -1,0 +1,13 @@
+Creating the request: id=9
+Server Response Time: Token created with id: 9
+0, high=5000000
+Server Response Time: Token updated with partial value: 62465248196222
+alue: 0
+ error: code = Unknown desc = token drop failed
+
+goroutine 1 [running]:
+token_manager/utils.IsSuccess(...)
+	C:/Users/shashank/Desktop/go-workspace/src/token_manager/utils/utils.go:19
+main.main()
+	C:/Users/shashank/Desktop/go-workspace/src/token_manager/client.go:67 +0x7fd
+exit status 2

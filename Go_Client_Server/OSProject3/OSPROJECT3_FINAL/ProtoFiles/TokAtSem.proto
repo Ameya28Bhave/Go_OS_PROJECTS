@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+//package TokServAtSem;
+
+option go_package = "./github.com/TokServAtSem";
+
+message Token {
+    int32 id = 1;
+    string value = 2;
+    int64 timestamp = 3;
+    repeated string read_servers = 4;
+    string write_server = 5;
+}
+
+message ReadRequest {
+    int32 token_id = 1;
+    repeated string read_servers = 2;
+    bool Ack = 3;
+}
+
+message WriteRequest {
+    int32 token_id = 1;
+    string value = 2;
+    string write_server = 3;
+    bool Ack = 4;
+}
+
+service TokenService {
+    rpc Read(ReadRequest) returns (Token) {}
+    rpc Write(WriteRequest) returns (Token) {}
+}
+//protoc --go_out=. --go-grpc_out=. --plugin=/Users/ameya/go/bin/protoc-gen-go ./TokAtSem.proto 

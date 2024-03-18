@@ -1,0 +1,12 @@
+Creating the request: id=10
+Server Response Time: Token created with id: 10
+00, high=5000000
+Server Response Time: 
+panic: rpc error: code = Unknown desc = token write failed
+
+goroutine 1 [running]:
+token_manager/utils.IsSuccess(...)
+	C:/Users/shashank/Desktop/go-workspace/src/token_manager/utils/utils.go:19
+main.main()
+	C:/Users/shashank/Desktop/go-workspace/src/token_manager/client.go:67 +0x7fd
+exit status 2

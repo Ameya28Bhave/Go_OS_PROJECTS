@@ -1,0 +1,89 @@
+CMSC-621 | Project-2 | Client-Server Token Manager
+
+Contributor: 
+    Shashank Sacheti
+
+## Steps to setup Environment
+
+**Go Installation**
+Follow: [Download and install Go](https://go.dev/dl/)
+Use Version: go1.17.7
+
+**Protocol Buffers Installation**
+Follow: [Protocol Buffer Compiler Installation](https://grpc.io/docs/protoc-installation/)
+Use Version: 3
+
+**Install gRPC plugins**
+
+$ go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.26
+$ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.1
+
+**Need to update PATH for protoc**
+
+$ export PATH="$PATH:$(go env GOPATH)/bin"
+
+## Steps to run
+
+Server:
+
+# go to project directory
+cd <project_directory>
+e.g. $ cd C:\Users\shashank\Desktop\go-workspace\src\token_manager
+
+# start the server
+go run server.go -port <port_number>
+e.g. $ go run server.go -port 50051
+
+
+Client:
+
+# go to project directory
+cd <project_directroy>
+e.g. $ cd C:\Users\shashank\Desktop\go-workspace\src\token_manager
+
+# create the request
+go run client.go -create -id <id_num> -host <host_addreess> -port <port_number>
+e.g. $ go run client.go -create -id 1 -host localhost -port 50051
+
+# write the request
+go run client.go -write -id <id_num> -name <token_name> -low <low> -mid <mid> -high <high> -host <host_address> -port <port_number>
+e.g. $ go run client.go -write -id 1 -name abcd -low 1 -mid 5 -high 10 -host localhost -port 50051
+
+# read the request
+go run client.go -read -id <id_num> -host <host_address> -port <port_number>
+e.g. $ go run client.go -read -id 1 -host localhost -port 50051
+
+# drop the request
+go run client.go -drop -id <id_num> -host <host_address> -port <port_number>
+e.g. $ go run client.go -drop -id 1 -host localhost -port 50051
+
+
+Steps to run the demo:
+
+# go to project directory
+cd <project_directroy>
+e.g. $ cd C:\Users\shashank\Desktop\go-workspace\src\token_manager
+
+# set permission for demo script
+$ chmod +x ./demo.sh
+
+# execute the demo script
+./demo.sh <port number>
+e.g. $ ./demo.sh 50051
+
+
+- you can check the output in output file after the execution
+
+# closing the server
+To close the server please press the Ctrl+C
+
+# References
+- I resued the hasing code since it was given in document
+- https://github.com/evilsocket/opensnitch/issues/373#issuecomment-803663343
+- https://github.com/grpc/grpc-go/issues/3794#issuecomment-720599532
+- https://stackoverflow.com/questions/15178088/create-global-map-variables
+- https://tutorialedge.net/golang/go-grpc-beginners-tutorial/
+- https://yourbasic.org/golang/errors-explained/
+- https://www.geeksforgeeks.org/math-inf-function-in-golang-with-examples/
+- https://learnandlearn.com/golang-programming/golang-reference/golang-find-the-minimum-value-min-function-examples-explanation
+

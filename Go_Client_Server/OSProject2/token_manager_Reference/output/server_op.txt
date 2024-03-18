@@ -1,0 +1,116 @@
+
+Server got started on the port 50051 
+
+Request Received --> Request Number:  1 , Request:  {Action: create, Id: 1}
+Processed request number  1 , Token State Now:  {id: 1, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [1]
+Request Received --> Request Number:  2 , Request:  {Action: write, Id: 1, Name: a1, Low: 0, Mid: 100000, High: 5000000}
+Processed request number  2 , Token State Now:  {id: 1, name: a1, domain: {low: 0, mid: 100000, high: 5000000}, state: {partial_val: 244646439597706, final_val: 0} }
+Tokenstore contains:  [1]
+Request Received --> Request Number:  3 , Request:  {Action: read, Id: 1}
+Request Received --> Request Number:  4 , Request:  {Action: drop, Id: 1}
+Request Received --> Request Number:  5 , Request:  {Action: create, Id: 2}
+Processed request number  5 , Token State Now:  {id: 2, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [2 1]
+Request Received --> Request Number:  6 , Request:  {Action: write, Id: 2, Name: a2, Low: 0, Mid: 100000, High: 5000000}
+Processed request number  6 , Token State Now:  {id: 2, name: a2, domain: {low: 0, mid: 100000, high: 5000000}, state: {partial_val: 34409462147573, final_val: 0} }
+Tokenstore contains:  [1 2]
+Processed request number  3 , Token State Now:  {id: 1, name: a1, domain: {low: 0, mid: 100000, high: 5000000}, state: {partial_val: 244646439597706, final_val: 3199055196279} }
+Tokenstore contains:  [1 2]
+Processed request number  4 , Token State Now:  {id: , name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [2]
+Request Received --> Request Number:  7 , Request:  {Action: read, Id: 2}
+Processed request number  7 , Token State Now:  {id: 2, name: a2, domain: {low: 0, mid: 100000, high: 5000000}, state: {partial_val: 34409462147573, final_val: 7488101211912} }
+Tokenstore contains:  [2]
+Request Received --> Request Number:  8 , Request:  {Action: drop, Id: 2}
+Processed request number  8 , Token State Now:  {id: , name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  []
+Request Received --> Request Number:  9 , Request:  {Action: create, Id: 3}
+Processed request number  9 , Token State Now:  {id: 3, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [3]
+Request Received --> Request Number:  10 , Request:  {Action: write, Id: 3, Name: a3, Low: 0, Mid: 100000, High: 5000000}
+Processed request number  10 , Token State Now:  {id: 3, name: a3, domain: {low: 0, mid: 100000, high: 5000000}, state: {partial_val: 22967630131282, final_val: 0} }
+Tokenstore contains:  [3]
+Request Received --> Request Number:  11 , Request:  {Action: read, Id: 3}
+Request Received --> Request Number:  12 , Request:  {Action: drop, Id: 3}
+Request Received --> Request Number:  13 , Request:  {Action: create, Id: 4}
+Processed request number  13 , Token State Now:  {id: 4, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [4 3]
+Request Received --> Request Number:  14 , Request:  {Action: write, Id: 4, Name: a4, Low: 0, Mid: 100000, High: 5000000}
+Processed request number  14 , Token State Now:  {id: 4, name: a4, domain: {low: 0, mid: 100000, high: 5000000}, state: {partial_val: 108818410975357, final_val: 0} }
+Tokenstore contains:  [3 4]
+Processed request number  11 , Token State Now:  {id: 3, name: a3, domain: {low: 0, mid: 100000, high: 5000000}, state: {partial_val: 22967630131282, final_val: 1753872827124} }
+Tokenstore contains:  [3 4]
+Processed request number  12 , Token State Now:  {id: , name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [4]
+Request Received --> Request Number:  15 , Request:  {Action: read, Id: 4}
+Request Received --> Request Number:  16 , Request:  {Action: drop, Id: 4}
+Request Received --> Request Number:  17 , Request:  {Action: write, Id: 5, Name: a5, Low: 0, Mid: 100000, High: 5000000}
+Processed request number  17 , error occured
+Request Received --> Request Number:  18 , Request:  {Action: create, Id: 5}
+Processed request number  18 , Token State Now:  {id: 5, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [4 5]
+Processed request number  15 , Token State Now:  {id: 4, name: a4, domain: {low: 0, mid: 100000, high: 5000000}, state: {partial_val: 108818410975357, final_val: 2286483012652} }
+Tokenstore contains:  [5 4]
+Processed request number  16 , Token State Now:  {id: , name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [5]
+Request Received --> Request Number:  19 , Request:  {Action: create, Id: 8}
+Processed request number  19 , Token State Now:  {id: 8, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [5 8]
+Request Received --> Request Number:  20 , Request:  {Action: drop, Id: 7}
+Processed request number  20 , error occured
+Request Received --> Request Number:  21 , Request:  {Action: read, Id: 7}
+Processed request number  21 , error occured
+Request Received --> Request Number:  22 , Request:  {Action: create, Id: 7}
+Processed request number  22 , Token State Now:  {id: 7, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [5 8 7]
+Request Received --> Request Number:  23 , Request:  {Action: create, Id: 6}
+Processed request number  23 , Token State Now:  {id: 6, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [6 5 8 7]
+Request Received --> Request Number:  24 , Request:  {Action: drop, Id: 5}
+Processed request number  24 , Token State Now:  {id: , name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [7 6 8]
+Request Received --> Request Number:  25 , Request:  {Action: read, Id: 6}
+Processed request number  25 , Token State Now:  {id: 6, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [8 7 6]
+Request Received --> Request Number:  26 , Request:  {Action: drop, Id: 9}
+Processed request number  26 , error occured
+Request Received --> Request Number:  27 , Request:  {Action: write, Id: 7, Name: a7, Low: 0, Mid: 100000, High: 5000000}
+Request Received --> Request Number:  28 , Request:  {Action: drop, Id: 6}
+Processed request number  28 , Token State Now:  {id: , name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [8 7]
+Request Received --> Request Number:  29 , Request:  {Action: create, Id: 9}
+Processed request number  29 , Token State Now:  {id: 9, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [9 8 7]
+Request Received --> Request Number:  30 , Request:  {Action: read, Id: 9}
+Processed request number  30 , Token State Now:  {id: 9, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [7 9 8]
+Request Received --> Request Number:  31 , Request:  {Action: write, Id: 6, Name: a6, Low: 0, Mid: 100000, High: 5000000}
+Processed request number  31 , error occured
+Request Received --> Request Number:  32 , Request:  {Action: read, Id: 5}
+Processed request number  32 , error occured
+Request Received --> Request Number:  33 , Request:  {Action: read, Id: 8}
+Processed request number  33 , Token State Now:  {id: 8, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [9 8 7]
+Request Received --> Request Number:  34 , Request:  {Action: write, Id: 8, Name: a8, Low: 0, Mid: 100000, High: 5000000}
+Request Received --> Request Number:  35 , Request:  {Action: create, Id: 10}
+Processed request number  35 , Token State Now:  {id: 10, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [7 10 9 8]
+Request Received --> Request Number:  36 , Request:  {Action: write, Id: 9, Name: a9, Low: 0, Mid: 100000, High: 5000000}
+Processed request number  27 , Token State Now:  {id: 7, name: a7, domain: {low: 0, mid: 100000, high: 5000000}, state: {partial_val: 64186539965955, final_val: 0} }
+Tokenstore contains:  [9 8 7 10]
+Request Received --> Request Number:  37 , Request:  {Action: read, Id: 10}
+Processed request number  37 , Token State Now:  {id: 10, name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [8 7 10 9]
+Request Received --> Request Number:  38 , Request:  {Action: drop, Id: 10}
+Processed request number  38 , Token State Now:  {id: , name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [9 8 7]
+Request Received --> Request Number:  39 , Request:  {Action: write, Id: 10, Name: a10, Low: 0, Mid: 100000, High: 5000000}
+Processed request number  39 , error occured
+Processed request number  34 , Token State Now:  {id: 8, name: a8, domain: {low: 0, mid: 100000, high: 5000000}, state: {partial_val: 509375155857474, final_val: 0} }
+Tokenstore contains:  [9 8 7]
+Request Received --> Request Number:  40 , Request:  {Action: drop, Id: 8}
+Processed request number  40 , Token State Now:  {id: , name: , domain: {low: 0, mid: 0, high: 0}, state: {partial_val: 0, final_val: 0} }
+Tokenstore contains:  [9 7]
+Processed request number  36 , Token State Now:  {id: 9, name: a9, domain: {low: 0, mid: 100000, high: 5000000}, state: {partial_val: 62465248196222, final_val: 0} }
+Tokenstore contains:  [7 9]
